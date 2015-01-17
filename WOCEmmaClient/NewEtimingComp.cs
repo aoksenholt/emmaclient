@@ -31,6 +31,8 @@ namespace LiveResults.Client
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "EmmaClient");
             m_Clients = new List<EmmaMysqlClient>();
 
+            if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
+
             w = File.AppendText(Path.Combine(path, "log-emmaclient-hs.txt"));
 
             w.WriteLine("Startup.");
