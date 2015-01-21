@@ -91,12 +91,13 @@ this.updateLastPassings = function ()
 				  url: "api.php",
 				  data: "comp="+ _compId + "&method=getlastpassings&lang=" + _lang + "&last_hash="+lastPassingsUpdateHash,
 				  success: resp_updateLastPassings,
-				  error: function(xhr, ajaxOptions, thrownError) { passingsUpdateTimer = setTimeout(updateLastPassings,updateInterval);},
+				  error: function() { passingsUpdateTimer = setTimeout(updateLastPassings,updateInterval);},
 				  dataType: "json"
 			});
 		}
 	
 };
+	
 	
 resp_updateLastPassings = function (data)
 {
