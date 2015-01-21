@@ -122,7 +122,9 @@ namespace LiveResults.Client
             pars.OnResult += new ResultDelegate(m_Parser_OnResult);
             logit("ready to run... starting EtimingParser");
             pars.Start();
-          
+
+            button2.Enabled = false;
+            button3.Enabled = true;
         }
 
         void m_Parser_OnResult(Result newResult)
@@ -190,6 +192,9 @@ namespace LiveResults.Client
                 logit("Stopping EtimingParser");
                 pars.Stop();
             }
+
+            button3.Enabled = false;
+            button2.Enabled = true;
         }
 
         private void NewEtimingComp_Closing(object sender, FormClosingEventArgs e)

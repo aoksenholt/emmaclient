@@ -44,11 +44,13 @@
             this.txtCompID = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.txtSystemMdb);
             this.groupBox1.Controls.Add(this.lblFormatInfo);
@@ -161,6 +163,7 @@
             // 
             // button3
             // 
+            this.button3.Enabled = false;
             this.button3.Location = new System.Drawing.Point(195, 129);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(73, 31);
@@ -177,6 +180,15 @@
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Servers";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "eTiming system file (system.mdw)";
             // 
             // NewEtimingComp
             // 
@@ -225,5 +237,6 @@
         private System.Windows.Forms.Label lblFormatInfo;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txtSystemMdb;
+        private System.Windows.Forms.Label label3;
     }
 }

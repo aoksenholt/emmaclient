@@ -104,7 +104,7 @@ resp_updateLastPassings = function (data)
 		{
 			if (data.passings != null)
 			{
-				str = ""
+				var str = "";
 				$.each(data.passings,
 					function(key, value)
 					{
