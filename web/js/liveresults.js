@@ -67,7 +67,7 @@ resp_updateClassList = function (data)
 		{
 			if (data.classes != null)
 			{
-				str = "<nowrap>"
+				var str = "<nowrap>";
 				$.each(data.classes,
 					function(key, value)
 					{
